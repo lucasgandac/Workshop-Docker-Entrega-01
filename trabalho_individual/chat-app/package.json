@@ -13,7 +13,8 @@
     "typescript": "~4.2.3"
   },
   "scripts": {
-    "watch": "parcel src/index.html --port=7001"
+    "watch": "parcel src/index.html --port=7001",
+    "start": "react-scripts start"
   },
   "dependencies": {
     "@apollo/client": "~3.3.19",
