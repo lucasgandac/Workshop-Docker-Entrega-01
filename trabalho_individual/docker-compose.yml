@@ -18,3 +18,12 @@ services:
     volumes:
       - ./api-gateway:/api-gateway/
       - /api-gateway/node_modules
+
+  chat-service:
+    build: ./chat-service
+    container_name: "chat-service"
+    ports:
+      - 7100:7100
+    volumes:
+      - ./chat-service:/chat-service/
+      - /chat-service/node_modules
