@@ -1,9 +1,20 @@
-version: "3"
+version: "3.8"
+
 services:
- chat-app:
+
+  chat-app:
     build: ./chat-app/
     container_name: "chat-app"
     ports:
       - "7001:7001"
     volumes:
       - ./chat-app:/usr/src/chat-app
+  
+  api-gateway:
+    build: ./api-gateway/
+    container_name: "api-gateway"
+    ports:
+      - 7000:7000
+    volumes:
+      - ./api-gateway:/api-gateway/
+      - /api-gateway/node_modules
