@@ -3,4 +3,4 @@ WORKDIR /users-service/
 COPY . .
 RUN npm install 
 EXPOSE 7101
-CMD ["sh","-c","npm run watch"]
+CMD ["sh","-c","npm run db:migrate && npm run watch"]
